@@ -92,7 +92,7 @@ export class ShadowComponent implements OnInit {
       gltf.scene.children[0]; 
       
       scene.add(gltf.scene)
-      animate()
+
       //gui.add(gltf.scene.rotation, 'x').min(0).max(9)
       //gui.add(gltf.scene.rotation, 'y').min(0).max(9)
       //gui.add(gltf.scene.rotation, 'z').min(0).max(9) 
@@ -102,11 +102,12 @@ export class ShadowComponent implements OnInit {
 
     const hlight = new THREE.AmbientLight (0x404040,1);
     scene.add(hlight);
+
     directionalLight = new THREE.DirectionalLight(0xffffff,1);
     directionalLight.position.set(0,1,0);
     directionalLight.castShadow = true;
     scene.add(directionalLight);
-
+ 
     const light = new THREE.PointLight(0xc4c4c4,1);
     light.position.set(0,10,1);
     scene.add(light);
@@ -116,9 +117,9 @@ export class ShadowComponent implements OnInit {
     scene.add(light2);
 
     const light3 = new THREE.PointLight(0xc4c4c4,1);
-    light3.position.set(0,1,-1);
+    light3.position.set(0,1,-10);
     scene.add(light3);
-    
+
     const light4 = new THREE.PointLight(0xc4c4c4,1);
     light4.position.set(-1,1,1);
     scene.add(light4);  
@@ -277,19 +278,11 @@ export class ShadowComponent implements OnInit {
     }
 
     tick() 
-    function animate() {
-        renderer.render(scene,camera);
-        requestAnimationFrame(animate);
-      }
-
-    function render() {
-
-      lightHelper.update();
-
-      shadowCameraHelper.update();
-
-      renderer.render( scene, camera );
-
-    }
+       
+    function render() { 
+      lightHelper.update(); 
+      shadowCameraHelper.update(); 
+      renderer.render( scene, camera ); 
+    } 
   } 
 }
