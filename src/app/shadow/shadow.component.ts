@@ -36,95 +36,71 @@ export class ShadowComponent implements OnInit {
     });
   }
  
-  main() {
-    const gltfLoader = new GLTFLoader()   
-    const canvas: any = document.querySelector('#canvas'); 
-    const container = document.getElementById( 'canvas' );
-    const scene = new THREE.Scene(); 
-    let tl = gsap.timeline()  
-	  let directionalLight;
-
-
-    //Camera 
-    const camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 100 );
-    camera.rotation.y = 45/180*Math.PI;
-    camera.position.x = -1;
-    camera.position.z = 4;
-    camera.position.y = 2;
+  main() { 
+    const gltfLoader = new GLTFLoader()     
+    const scene = new THREE.Scene();   
+   
+    const container = document.querySelector( '.canvas' );   
+    document.styleSheets[0].insertRule('canvas { outline:none; border:none; }', 0);  
+	  
+     //Camera setup
+    const aspect = container.clientWidth / container.clientHeight; 
+    const camera = new THREE.PerspectiveCamera( 55, aspect, 1, 1000 );  
+    camera.position.x = -12;
+    camera.position.z = 1;
+    camera.position.y = 1;
     scene.add(camera)
 
-
-    //Scene 
-    gltfLoader.load('../../assets/aranha4.gltf', (gltf) => { 
-      gltf.scene.scale.set(0.3, 0.3, 0.3)
-      gltf.scene.rotation.set(0, 1.1, 0)
-      gltf.scene.position.set(0, 1, 0)
-      scene.add(gltf.scene) 
-    }) 
-
-
-    // Lights
-    const hlight = new THREE.AmbientLight (0x404040,1);
-    scene.add(hlight);
-
-    directionalLight = new THREE.DirectionalLight(0xffffff,1);
-    directionalLight.position.set(0,1,0);
-    directionalLight.castShadow = true;
-    scene.add(directionalLight);
- 
-    const light = new THREE.PointLight(0xc4c4c4,1);
-    light.position.set(0,10,1);
+    // Light 
+    const ambientLight = new AmbientLight(0x323232);
+		const mainLight = new DirectionalLight(0xffffff, 1.0);
+		mainLight.position.set(-12, 1, 1);
+		scene.add(ambientLight, mainLight);
+  
+    const light = new THREE.DirectionalLight(0x000000, 1);
+    light.position.set(50, 50, 10);
     scene.add(light);
 
-    const light2 = new THREE.PointLight(0xc4c4c4,1);
-    light2.position.set(1,1,0);
-    scene.add(light2);
+    const plight = new THREE.PointLight( 0x6ce0ff, 2, 100 );
+    plight.position.set( 50, 50, 50 );
+    scene.add( plight );
 
-    const light3 = new THREE.PointLight(0xc4c4c4,1);
-    light3.position.set(0,1,-10);
-    scene.add(light3);
-
-    const light4 = new THREE.PointLight(0xc4c4c4,1);
-    light4.position.set(-1,1,1);
-    scene.add(light4);   
-
-    const gridHelper = new THREE.GridHelper( 10, 20, 0x888888, 0x444444 );
-    gridHelper.position.set(0, 1.2, 0)
-    scene.add( gridHelper );
- 
-    //Renderer   
-    const renderer = new THREE.WebGLRenderer({  
-      antialias: true, 
-    })
-    renderer.setPixelRatio( window.devicePixelRatio );
-  	renderer.setSize( window.innerWidth, window.innerHeight ); 
-    container.appendChild( renderer.domElement );
- 
-    // Controls Livre 
-    const controls = new OrbitControls( camera, renderer.domElement );
-    controls.screenSpacePanning = true;
-    controls.minDistance = 5;
-    controls.maxDistance = 40;
-    controls.target.set( 0, 2, 0 );
-    controls.update();
+    const lightProbe = new THREE.LightProbe();
+	  scene.add( lightProbe );
+  
+    //Renderer
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance", }) 
+    renderer.setSize(container.clientWidth, container.clientHeight) 
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) 
+    container.appendChild(renderer.domElement) 
+    renderer.shadowMap.enabled = true;   
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;   
+    // tone mapping
+    renderer.toneMapping = THREE.NoToneMapping;
+    renderer.outputEncoding = THREE.sRGBEncoding;   
     
-    window.addEventListener( 'resize', onWindowResize );
-    function onWindowResize() { 
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix(); 
-      renderer.setSize( window.innerWidth, window.innerHeight ); 
-    }
-
+    //Load Model
+    gltfLoader.load('../../assets/untitled.gltf', (gltf) => { 
+      gltf.scene.scale.set(5, 5, 5)
+      gltf.scene.rotation.set(0, -1, 0)
+      gltf.scene.position.set(1, -4, 1)   
+      scene.add(gltf.scene) 
+    }) 
+     
+    // Controls Livre 
+    const controls = new OrbitControls( camera, renderer.domElement ); 
+    controls.target.set( 1, 1, 1 );
+    controls.enableZoom = false
+    controls.enablePan = false  
+    controls.update();
+  
     const clock = new THREE.Clock() 
-        const tick = () => {    
+        
+    const tick = () => {    
         controls.update() 
         renderer.render(scene, camera) 
         window.requestAnimationFrame(tick)
-       } 
-        tick() 
-        function render() {  
-          renderer.render( scene, camera ); 
-        }  
-        render()
+    } 
+    tick()   
   } 
 }

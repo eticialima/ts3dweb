@@ -1,0 +1,452 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "11647_Refrigerator_V1_L3.001",
+            "rotation" : [
+                4.34649882663507e-06,
+                0,
+                0,
+                -1
+            ],
+            "scale" : [
+                0.013773376122117043,
+                0.013773376122117043,
+                0.013773376122117043
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Refrigerator_handle",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.3294000029563904,
+                    0.3294000029563904,
+                    0.3294000029563904,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.7113248705863953
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "01___Default",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.5881999731063843,
+                    0.5881999731063843,
+                    0.5881999731063843,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.8945907354354858
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Refrigerator1",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.847100019454956,
+                    0.847100019454956,
+                    0.847100019454956,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.7418010830879211
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "refrigerator_leg",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8784000277519226,
+                    0.847100019454956,
+                    0.8274999856948853,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.7354248762130737
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "refrigerator_bacl",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.8945907354354858
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "11647_Refrigerator_V1_L3.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 2
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 12,
+                        "NORMAL" : 13,
+                        "TEXCOORD_0" : 14
+                    },
+                    "indices" : 15,
+                    "material" : 3
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 16,
+                        "NORMAL" : 17,
+                        "TEXCOORD_0" : 18
+                    },
+                    "indices" : 19,
+                    "material" : 4
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Refrigerator_Back",
+            "uri" : "Refrigerator_Back.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 2874,
+            "max" : [
+                20.45669937133789,
+                87.4563980102539,
+                37.35929870605469
+            ],
+            "min" : [
+                -26.228599548339844,
+                43.019100189208984,
+                33.1702995300293
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 2874,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 2874,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 14544,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 3680,
+            "max" : [
+                33.43629837036133,
+                147.97979736328125,
+                26.38159942626953
+            ],
+            "min" : [
+                -34.8390007019043,
+                1.8005000352859497,
+                25.981300354003906
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 3680,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 3680,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 21120,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 10514,
+            "max" : [
+                34.35900115966797,
+                149.1280059814453,
+                33.29949951171875
+            ],
+            "min" : [
+                -35.64099884033203,
+                0.9096999764442444,
+                -26.015899658203125
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 10514,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 10514,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 59232,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 2772,
+            "max" : [
+                27.903600692749023,
+                0.9215999841690063,
+                23.401599884033203
+            ],
+            "min" : [
+                -29.156999588012695,
+                -0.6334999799728394,
+                -21.505300521850586
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 2772,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5126,
+            "count" : 2772,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 15,
+            "componentType" : 5123,
+            "count" : 14448,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 16,
+            "componentType" : 5126,
+            "count" : 7482,
+            "max" : [
+                32.14699935913086,
+                132.7407989501953,
+                -26.0044002532959
+            ],
+            "min" : [
+                -33.130401611328125,
+                28.731800079345703,
+                -28.381900787353516
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 17,
+            "componentType" : 5126,
+            "count" : 7482,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 18,
+            "componentType" : 5126,
+            "count" : 7482,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 19,
+            "componentType" : 5123,
+            "count" : 39696,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 34488,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 34488,
+            "byteOffset" : 34488
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 22992,
+            "byteOffset" : 68976
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29088,
+            "byteOffset" : 91968
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44160,
+            "byteOffset" : 121056
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44160,
+            "byteOffset" : 165216
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29440,
+            "byteOffset" : 209376
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 42240,
+            "byteOffset" : 238816
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 126168,
+            "byteOffset" : 281056
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 126168,
+            "byteOffset" : 407224
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 84112,
+            "byteOffset" : 533392
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 118464,
+            "byteOffset" : 617504
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 33264,
+            "byteOffset" : 735968
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 33264,
+            "byteOffset" : 769232
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 22176,
+            "byteOffset" : 802496
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 28896,
+            "byteOffset" : 824672
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 89784,
+            "byteOffset" : 853568
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 89784,
+            "byteOffset" : 943352
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 59856,
+            "byteOffset" : 1033136
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 79392,
+            "byteOffset" : 1092992
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1172384,
+            "uri" : "untitled.bin"
+        }
+    ]
+}
