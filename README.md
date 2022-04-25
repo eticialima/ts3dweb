@@ -1,9 +1,9 @@
 
-## Este projeto foi feito com:
+## This project was made with:
 
 * Angular 12.
 
-## Como rodar o projeto?
+## how to run the project?
 
 ``` 
 npm install -g @angular/cli
@@ -11,11 +11,11 @@ npm install
 ng serve
 ```
 
-A aplicação estará rodando na porta 4200.
+The application will be running on port 4200.
 
-E a primeira rota é localhost:4200 
+this is first router localhost:4200 
 
-### Obrigada ❤️
+### Thanks ❤️
 [@eticialima](https://www.instagram.com/eticialima)
 
 ### buymeacoffee buymeacoffee
